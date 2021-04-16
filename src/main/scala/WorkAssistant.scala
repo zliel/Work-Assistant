@@ -45,7 +45,7 @@ case class WorkHelper() {
    * argument
    *
    * @param numberOfStudents The number of students to be used in the calculation, retrieved from
-   *        the [[WorkHelper#handleSelection()]] method
+ *                           the [[WorkHelper#handleSelection()]] method
    * @return A double representing the maximum possible income for the month
    */
   def calculateIncome(numberOfStudents:Int): Double = {
@@ -58,6 +58,10 @@ case class WorkHelper() {
 
   /**
    * Searches Violinist.com for the specified search term and displays the search page in the user's preferred browser
+   *
+   * @param searchTerm The specified term to search for, passed in by the
+   *                   [[WorkHelper#handleSelection()]] method. It will be appended to a url to
+   *                   be passed into the [[WorkHelper#openPageInBrowser()]] method.
    */
   def searchViolin(searchTerm:String): Unit = {
     val url : String = f"https://violinist.com/search.cfm?q=$searchTerm"
@@ -69,6 +73,10 @@ case class WorkHelper() {
 
   /**
    * Searches IMSLP for requested search term and opens up the search page in the user's preferred browser
+   *
+   * @param searchTerm The specified term to search for, passed in by the
+   *                   [[WorkHelper#handleSelection()]] method. It will be appended to a url to
+   *                   be passed into the [[WorkHelper#openPageInBrowser()]] method.
    */
   def searchImslp(searchTerm:String): Unit = {
     val url : String = f"https://www.google.com/search?q=site:imslp.org+$searchTerm"
