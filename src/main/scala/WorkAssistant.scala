@@ -40,7 +40,14 @@ case class WorkHelper() {
     }
   }
 
-  // Basic program to calculate my monthly income
+  /**
+   * Calculates the maximum income for the month using the number of students passed in as an
+   * argument
+   *
+   * @param numberOfStudents The number of students to be used in the calculation, retrieved from
+   *        the [[WorkHelper#handleSelection()]] method
+   * @return A double representing the maximum possible income for the month
+   */
   def calculateIncome(numberOfStudents:Int): Double = {
     println("Processing . . . ")
     val income : Double = (numberOfStudents * 12.5) * 4
